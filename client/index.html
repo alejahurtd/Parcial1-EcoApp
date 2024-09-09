@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Marco Polo Game</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+				margin: 0;
+				background-color: #f0f0f0;
+			}
+
+			.container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				background-color: white;
+				padding: 20px;
+				border-radius: 10px;
+				box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+			}
+
+			h1 {
+				margin-bottom: 20px;
+			}
+
+			#start-button {
+				margin-top: 20px;
+				padding: 10px;
+				font-size: 16px;
+				background-color: #007bff;
+				color: white;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+				display: block;
+			}
+
+			#start-button:hover {
+				background-color: #0056b3;
+			}
+
+			#action-button {
+				margin-top: 20px;
+				padding: 10px;
+				font-size: 16px;
+				background-color: #007bff;
+				color: white;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+				display: none;
+			}
+
+			#action-button:hover {
+				background-color: #0056b3;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Marco-Polo Game</h1>
+
+			<div id="registration-form">
+				<input id="nickname" type="text" placeholder="Nombre" />
+				<button id="join-button">Unirme</button>
+			</div>
+
+			<div id="game-controls" style="display: none">
+				<div id="nickname-display">Esperando asignación de rol...</div>
+				<button id="start-button">Iniciar Juego</button>
+				<div id="role-display">Esperando asignación de rol...</div>
+				<button id="action-button"></button>
+			</div>
+		</div>
+
+		<script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+		<script src="index.js"></script>
+	</body>
+</html>
